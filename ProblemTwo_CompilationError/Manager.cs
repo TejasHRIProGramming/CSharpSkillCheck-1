@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProblemTwo_CompilationError
 {
-    class Manager
+    class Manager : Employee
     {
         public List<Employee> DirectReports { get; set; }
         public string CostCode { get; set; }
 
-        public Manager(List<Employee> drEmployeesLst, string cCode) :base(eID, eName, eLevel, eDoJ)
+        public Manager(List<Employee> drEmployeesLst, string cCode)
         {
             DirectReports = drEmployeesLst;
             CostCode = cCode;

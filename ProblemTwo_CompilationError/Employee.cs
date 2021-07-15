@@ -17,11 +17,14 @@ namespace ProblemTwo_CompilationError
         public Employee()
         {
             //Default number of leaves credited is 2 per month based on date of joining to the current date
-            NoOfLeaves= GetMonthDifference(DateOfJoining, DateTime.Now) * 2;
+            NoOfLeaves = GetMonthDifference(DateOfJoining, DateTime.Now) * 2;
         }
-        public Employee(int eID,string eName,int eLevel, DateTime eDoJ)
+        public Employee(int eID, string eName, int eLevel, DateTime eDoJ)
         {
-
+            EmpID = eID;
+            EmpName = eName;
+            EmpLevel = eLevel;
+            DateOfJoining = eDoJ;
         }
 
         public static int GetMonthDifference(DateTime startDate, DateTime endDate)
